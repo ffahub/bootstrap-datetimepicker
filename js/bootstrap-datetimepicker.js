@@ -533,6 +533,10 @@
       top = top - containerOffset.top;
       left = left - containerOffset.left;
 
+            if( !elementOrParentIsFixed(this.element) ){
+          top = top + document.body.scrollTop;
+            }
+
       this.picker.css({
         top:    top,
         left:   left,
@@ -754,7 +758,7 @@
         months.slice(0, startMonth + 1).addClass('disabled');
       }
       if (year == endYear) {
-        months.slice(endMonth).addClass('disabled');
+        months.slice(endMonth + 1).addClass('disabled');
       }
 
       html = '';
@@ -1450,7 +1454,7 @@
       }
       return {separators: separators, parts: parts};
     },
-    parseDate: function (date, format, language, type) {
+    parseDate:        function (date, format, language, type) {
       if (date instanceof Date) {
         var dateUTC = new Date(date.valueOf() - date.getTimezoneOffset() * 60000);
         dateUTC.setMilliseconds(0);
