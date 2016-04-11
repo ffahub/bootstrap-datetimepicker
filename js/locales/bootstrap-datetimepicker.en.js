@@ -11,6 +11,7 @@
       monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       today: "Today",
       clear: "Clear",
+      meridiem: "",      
       format: "mm/dd/yyyy",
       titleFormat: "D, yyyy-mm-dd",
       weekStart: 0
