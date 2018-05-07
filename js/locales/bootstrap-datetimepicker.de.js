@@ -1,4 +1,4 @@
-/**
+﻿/**
  * German translation for bootstrap-datetimepicker
  * Sam Zurcher <sam@orelias.ch>
  */
